@@ -1,4 +1,4 @@
-#include "Zombie.h"
+#include "Zombie.hpp"
 
 Zombie::Zombie(){};
 std::string Zombie :: getname(){return name;}

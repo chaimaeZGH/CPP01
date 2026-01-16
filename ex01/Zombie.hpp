@@ -13,5 +13,5 @@ public:
     void announce();
     ~Zombie();
 };
-
+Zombie* zombieHorde( int N, std::string name );
 #endif

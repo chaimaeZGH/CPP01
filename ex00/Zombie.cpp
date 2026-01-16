@@ -1,4 +1,4 @@
-#include "Zombie.h"
+#include "Zombie.hpp"
 
 std::string Zombie :: getname(){return name;}
 void Zombie::setname(std::string first) {name = first;}
