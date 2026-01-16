@@ -1,5 +1,6 @@
 #include "Zombie.h"
 
+Zombie::Zombie(){};
 std::string Zombie :: getname(){return name;}
 void Zombie::setname(std::string first) {name = first;}
 void Zombie::announce() {std::cout << name << ": BraiiiiiiinnnzzzZ..."  << std::endl;}
