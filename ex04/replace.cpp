@@ -2,33 +2,32 @@
 
 void replaceStrings(std::string& filename, std::string& s1, std::string& s2)
 {
-    ifstream File1(filename);
+    std::ifstream File1(filename);
     if (!File1)
     {
-        cerr << "Error: Failed to open input file" << endl;
+        std::cerr << "Error: Failed to open input file" << std::endl;
         return;
     }
-    ofstream File2(filename + ".replace");
+    std::ofstream File2(filename + ".replace");
     if (!File2)
     {
-        cerr << "Error: Failed to create output file" << endl;
+        std::cerr << "Error: Failed to create output file" << std::endl;
         return;
     }
-    string line;
+    std::string line;
     while(getline(File1,line))
     {
-        size_t position;
-        while((position = line.find(s1)) != std::string::npos)
+        size_t pos;
+        while((pos = line.find(s1)) != std::string::npos)
         {
-            line.erase(position, s1.length());
-            line.insert(position, s2);
-            position += s2.length();
+            line.erase(pos, s1.length());
+            line.insert(pos, s2);
+            pos += s2.length();
         }
         File2 << line;
         if (!File1.eof())
         File2 << '\n';
     }
-
     File1.close();
     File2.close();
 }

@@ -2,8 +2,8 @@
 
 Zombie* zombieHorde( int N, std::string name )
 {
-     Zombie* nzombie = new Zombie[N];
-    if (nzombie == NULL)
+    Zombie* group_zombie = new Zombie[N];
+    if (group_zombie == NULL)
     {
         std::cout << "bad allocation " << std::endl;
         exit (1);
@@ -11,8 +11,8 @@ Zombie* zombieHorde( int N, std::string name )
     int i  = 0;
     while (i < N)
     {
-        nzombie[i].setname(name);
+        group_zombie[i].setname(name);
         i++;
     }
-    return nzombie;
+    return group_zombiee;
 }

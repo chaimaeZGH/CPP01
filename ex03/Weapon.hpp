@@ -1,10 +1,10 @@
 #ifndef WEAPON_HPP
 #define WEAPON_HPP
-
-#include <iostream>
 #include <string>
+#include <iostream>
 
-class Weapon {
+class Weapon 
+{
     private :
         std::string type;
     public :

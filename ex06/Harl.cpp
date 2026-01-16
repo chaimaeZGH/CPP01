@@ -37,27 +37,22 @@ void Harl::error(void)
 
 void Harl::FolterComplain(std::string level)
 {
-    int index = -1;
+    int choice = 0;
     std::string levels[4] = {"DEBUG", "INFO", "WARNING","ERROR"};
-    while (++index < 4)
+    while (choice < 4)
     {
-        if (levels[index] == level)
+        if (levels[choice] == level)
             break;
+        choice++;
     }
-    switch (index)
+    switch (choice)
     {
         case 0:
             this->debug();
-            this->FolterComplain("INFO");
-            break;
         case 1:
             this->info();
-            this->FolterComplain("WARNING");
-            break;
         case 2:
             this->warning();
-            this->FolterComplain("ERROR");
-            break;
         case 3:
             this->error();
             break;

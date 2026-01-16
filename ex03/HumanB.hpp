@@ -4,7 +4,8 @@
 #include <string>
 #include "Weapon.hpp"
 
-class HumanB{
+class HumanB
+{
     private :
         std::string name;
         Weapon *weapon;
@@ -12,7 +13,6 @@ class HumanB{
         HumanB(std::string name);
         void setWeapon(Weapon& Weapon);
         void attack();
-
 };
 
 #endif

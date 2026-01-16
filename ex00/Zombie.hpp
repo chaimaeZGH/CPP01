@@ -1,10 +1,8 @@
-// where u declar the class of the zombie
 #ifndef ZOMBIE_HPP
 #define ZOMBIE_HPP
 
 #include <iostream>
 #include <string>
-#include <vector>
 #include <cctype>
 
 class Zombie
